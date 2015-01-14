@@ -49,12 +49,8 @@ int ladder(string start, string end, Hunspell *h) {
 				std::cout << st.top() << " ";
 				st.pop(); 
 			}
-			cout << endl;
-			curr_node = word->front(); 
-			word->pop(); 
-			curr_word = curr_node->word;
-			cout << curr_word << std::endl;
-			curr_dist = curr_node->dist; 
+
+			return curr_dist; 
 		}
 		for(int i = 0; i < curr_word.length(); i++) {
 			for(char c='a'; c <= 'z'; c++) {
@@ -70,7 +66,7 @@ int ladder(string start, string end, Hunspell *h) {
 		}
 	}
 
-	//return 0; 
+	return 0; 
 }
 
 int main(void) {

@@ -8,7 +8,7 @@ fi
 mkdir $DICT_DIR
 cd $DICT_DIR
 
-wget http://archive.services.openoffice.org/pub/mirror/OpenOffice.org/contrib/dictionaries/en_US.zip
+curl -o en_US.zip http://archive.services.openoffice.org/pub/mirror/OpenOffice.org/contrib/dictionaries/en_US.zip
 unzip en_US.zip
 rm -f en_US.zip
 rm -f README_en_US.txt
