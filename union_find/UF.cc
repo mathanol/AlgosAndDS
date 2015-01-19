@@ -37,17 +37,17 @@ void UF::Union( int node_a, int node_b ) {
 		return; 
 
 
-	//Connect to the smaller tree
+	//Connect to the larger tree
 	int size_root_a = size[root_a];
 	int size_root_b = size[root_b];
 
 	if ( size_root_a < size_root_b ) {
 		map[root_a] = root_b;
-		size[ root_b ] += 1;
+		size[ root_b ] += size[root_a];
 
 	} else {
 		map[root_b] = root_a;
-		size[ root_a ] += 1;
+		size[ root_a ] += size[root_b];
 	}
 
 	_count -= 1;
