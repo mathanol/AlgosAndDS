@@ -42,12 +42,8 @@ int QuickSort<T,N>::partition( T arr[], int start, int end) {
 		}
 
 		if (forward >= backward) {
-		std::cout << "fwd11:" << forward << std::endl;
-		std::cout << "backward11:" << backward << std::endl;
 			break;
 		}
-		std::cout << "fwd:" << forward << std::endl;
-		std::cout << "backward:" << backward << std::endl;
 		std::swap(arr[forward], arr[backward]);
 
 	}
@@ -69,11 +65,11 @@ void QuickSort<T,N>::_sort(T arr[], int start, int end) {
 int main(void) {
 
 
-        int foo[] = { 16, 15, 14, 40, 12, 6, 5, 18 };
-        QuickSort<int, 8>::sort( foo );
-        for(int i = 0; i < 8; ++i)
-                std::cout << foo[i] << std::endl;
-
+        int foo[] = { 16, 15, 14, 40, 12, 6, 5, 18, 5, 5, 6, 11, 12, 12, 40};
+        QuickSort<int, 15>::sort( foo );
+        for(int i = 0; i < 15; ++i)
+		std::cout << foo[i] << " ";
+	std::cout << std::endl;
         return 0;
 }
 				
